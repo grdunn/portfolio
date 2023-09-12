@@ -1,84 +1,41 @@
+import Card from '../components/Card.jsx'
+import Data from './portfolio.js'
+
 function Home() {
 
     return (
       <>
-        <div className="o-container o-container--main">
+      <div className="o-container o-container--main">
         <div className="o-grid">  
           <div className="o-grid__one">
-            <h2>Web developer, audio engineer, musician, restaurant lifer.</h2>  
+            <h2>Web developer, audio engineer, musician, creative type.</h2>  
           </div> 
         </div>
       </div>
-      
+
+      <a className="offset-100" id="work"></a>
       <section className="o-container o-container--section">
         <div className="o-grid">
           <div className="o-grid__one">
             <div className="c-portfolio-grid">
               <div className="c-portfolio-grid__wrapper">
-                <div className="c-portfolio-grid__card">
-                  {/* <img src="https://picsum.photos/250/150" className="c-portfolio-grid__image"/> */}
-                  <h3>Georgetown University Global Cities</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis enim. <a href="#">Read More</a></p>
-                </div>
-                <div className="c-portfolio-grid__card">
-                  {/* <img src="https://picsum.photos/250/150" className="c-portfolio-grid__image"/> */}
-                  <h3>Design Advocacy Group</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis enim. <a href="#">Read More</a></p>
-                </div>
-                <div className="c-portfolio-grid__card">
-                  {/* <img src="https://picsum.photos/250/150" className="c-portfolio-grid__image"/> */}
-                  <h3>ApostropheCMS Styleguide Tool</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis enim. <a href="#">Read More</a></p>
-                </div>
-                <div className="c-portfolio-grid__card">
-                  {/* <img src="https://picsum.photos/250/150" className="c-portfolio-grid__image"/> */}
-                  <h3>Sustain VC</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis enim. <a href="#">Read More</a></p>
-                </div>
-                <div className="c-portfolio-grid__card">
-                  {/* <img src="https://picsum.photos/250/150" className="c-portfolio-grid__image"/> */}
-                  <h3>McCormick Taylor</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis enim. <a href="#">Read More</a></p>
-                </div>
-                <div className="c-portfolio-grid__card">
-                  {/* <img src="https://picsum.photos/250/150" className="c-portfolio-grid__image"/> */}
-                  <h3>Georgetown University Global Cities</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis enim. <a href="#">Read More</a></p>
-                </div>
-                <div className="c-portfolio-grid__card">
-                  {/* <img src="https://picsum.photos/250/150" className="c-portfolio-grid__image"/> */}
-                  <h3>Destiny2 Xur Inventory</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis enim. <a href="#">Read More</a></p>
-                </div>
-                <div className="c-portfolio-grid__card">
-                  {/* <img src="https://picsum.photos/250/150" className="c-portfolio-grid__image"/> */}
-                  <h3>Design Advocacy Group</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis enim. <a href="#">Read More</a></p>
-                </div>
-                <div className="c-portfolio-grid__card">
-                  {/* <img src="https://picsum.photos/250/150" className="c-portfolio-grid__image"/> */}
-                  <h3>ApostropheCMS Styleguide Tool</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis enim. <a href="#">Read More</a></p>
-                </div>
-                <div className="c-portfolio-grid__card">
-                  {/* <img src="https://picsum.photos/250/150" className="c-portfolio-grid__image"/> */}
-                  <h3>Sustain VC</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis enim. <a href="#">Read More</a></p>
-                </div>
-                <div className="c-portfolio-grid__card">
-                  {/* <img src="https://picsum.photos/250/150" className="c-portfolio-grid__image"/> */}
-                  <h3>McCormick Taylor</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis enim. <a href="#">Read More</a></p>
-                </div>
+                { Data.map((item) => (
+                  <Card 
+                    title={item.title}
+                    description={item.description}
+                    url={item.url}
+                    link={item.link}
+                    tag={item.tag}
+                    key={Math.random()}
+                  />
+                ))}
               </div>
             </div>
           </div> 
-          <div className="o-grid__two">
-            {/* <h4>Web Development</h4> */}
-          </div>
         </div>
       </section>
 
+      <a className="offset-50" id="experience"></a>
       <section className="o-container o-container--section">
         <div className="o-grid">
           <div className="o-grid__one">

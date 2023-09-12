@@ -5,10 +5,13 @@
 }
 
 .c-portfolio-grid__card {
-  width: 50%;
+  width: 100%;
   padding: 0 2rem;
   box-sizing: border-box;
   margin-bottom: 5rem;
+  @media (min-width: $breakpoint-medium) {
+    width: 50%;
+  }
 }
 
 .c-portfolio-grid__image {
@@ -18,4 +21,12 @@
 
 .c-portfolio-grid__nav {
   margin-bottom: 40px;
+}
+
+.c-portfolio-grid__tag {
+  border: 1px solid yellow;
+  border-radius: 3px;
+  padding: 5px;
+  margin-right: 10px;
+  background-color: yellow;
 }

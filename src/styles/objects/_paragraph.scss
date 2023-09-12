@@ -1,4 +1,7 @@
 .o-paragraph {
   max-width: 60rem;
-  margin-bottom: 70px;
+  margin-bottom: 4rem;
+  @media (min-width: $breakpoint-small) {
+    margin-bottom: 7rem;
+  }
 }

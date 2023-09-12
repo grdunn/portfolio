@@ -1,12 +1,17 @@
 .o-container {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   max-width: 1200px;
+  @media (min-width: $breakpoint-medium) {
+    width: 80%;
+  }
 }
 
 .o-container--main {
-  margin-top: 130px;
-  margin-bottom: 60px;
+  margin: 4rem auto;
+  @media (min-width: $breakpoint-small) {
+    margin: 7rem auto;
+  }
 }
 
 .o-container--section {
@@ -14,5 +19,13 @@
 }
 
 .o-container--margin {
-  margin-top: 60px;
+  margin-top: 6rem;
+}
+
+.o-container--flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
 }
