@@ -2,6 +2,11 @@ h1,h2,h3,h4,h5 {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  color: $font-color;
+}
+
+h1 {
+  font-size: 1.6rem;
 }
 
 
@@ -12,19 +17,10 @@ h2 {
     font-size: 4rem;
     max-width: 600px;
   }
-  @media (min-width: $breakpoint-medium) {
-    font-size: 6rem;
-  }
-  @media (min-width: $breakpoint-large) {
-    max-width: none;
-  }
 }
 
 h3 {
-  font-size: 1.8rem;
-  @media (min-width: $breakpoint-small) {
-    font-size: 2rem;
-  }
+  font-size: 1.6rem;
 }
 
 h4 {
@@ -33,14 +29,13 @@ h4 {
   margin-bottom: 30px;
 }
 
-p {
-  font-family: 'Nanum Myeongjo', serif;
+p, a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   font-size: 1.6rem;
-  line-height: 2.5rem;
-  @media (min-width: $breakpoint-small) {
-    font-size: 1.8rem;
-    line-height: 3rem;
-  }
+  line-height: 2.6rem;
+  letter-spacing: 0.3px;
+  color: $font-color;
 }
 
 span {

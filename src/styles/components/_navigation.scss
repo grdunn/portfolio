@@ -45,4 +45,12 @@
       }
     }
   }
+  .c-navigation__logo {
+    font-family: 'Nanum Myeongjo', serif;
+    &:hover {
+      &::after {
+        display: none;
+      }
+    }
+  }
 }
