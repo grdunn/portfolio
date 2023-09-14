@@ -44,7 +44,7 @@ const Data = [
   {
     title: 'Xur Inventory',
     description: 'A little tool that pulls live game data from Destiny2. Specifically, the weekly inventory of the character Xur. Built to learn VueJS.',
-    url: '',
+    url: 'https://destiny-xur-38d218cf797c.herokuapp.com',
     tag: 'Web Development'
   }
 ]
