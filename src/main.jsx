@@ -10,11 +10,11 @@ import Home from './routes/Home.jsx'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/portfolio",
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "/portfolio",
         element: <Home />,
       }
     ]
