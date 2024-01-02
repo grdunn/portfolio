@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
 import { Outlet, Link } from "react-router-dom";
-import './styles/index.scss'
+import "./index.css";
 
 function App() {
-
   return (
     <>
       <div>
@@ -24,7 +23,7 @@ function App() {
         </div>
       </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
