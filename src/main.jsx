@@ -1,12 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import App from './App.jsx'
-import Home from './routes/Home.jsx'
+import App from "./App.jsx";
+import Portfolio from "./routes/Portfolio.jsx";
+import F51 from "./routes/F51.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,15 +13,18 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
-      }
-    ]
-  }
+        element: <Portfolio />,
+      },
+      {
+        path: "/f51",
+        element: <F51 />,
+      },
+    ],
+  },
 ]);
 
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
