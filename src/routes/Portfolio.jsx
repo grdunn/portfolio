@@ -71,7 +71,7 @@ function Portfolio() {
                     <path
                       d="M10 10.5L13.5 7L10 3.5"
                       stroke="#000001"
-                      strokeLinecaps="round"
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                     />
                   </svg>
