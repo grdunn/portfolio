@@ -1,6 +1,13 @@
-import React from "react";
+import { React, useEffect } from "react";
 
 function F51() {
+  useEffect(() => {
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, []);
   return (
     <>
       <div className="container mx-auto mt-32 lg:mt-52 px-12">
