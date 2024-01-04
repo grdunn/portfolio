@@ -42,7 +42,7 @@ function F51() {
 
           <div className="col-start-1 col-span-6 md:col-span-3 my-12 z-10">
             <figure>
-              <img src="./src/images/f51/f51_front.jpg" />
+              <img src="/images/f51/f51_front.jpg" />
               <figcaption>
                 The front panel of the completed tweed Champ.
               </figcaption>
@@ -51,7 +51,7 @@ function F51() {
 
           <div className="col-start-1 col-span-6 md:col-span-3 my-12">
             <figure>
-              <img src="./src/images/f51/f51_back.jpg" />
+              <img src="/images/f51/f51_back.jpg" />
               <figcaption>
                 The rear side of the amp with the back panel removed.
               </figcaption>
@@ -76,7 +76,7 @@ function F51() {
       <div className="grid gap-x-20 grid-cols-6">
         <div className="col-start-1 col-span-4 my-12 z-10">
           <figure className="p-12 pr-24">
-            <img src="./src/images/f51/f51_collage1.png" />
+            <img src="/images/f51/f51_collage1.png" />
             <figcaption>
               An early messy configration of positioning the board into the
               chassis.
@@ -85,11 +85,11 @@ function F51() {
         </div>
         <div className="col-start-5 col-span-2 my-12">
           <figure className="-ml-12 mb-24">
-            <img src="./src/images/f51/f51_collage2.jpg" />
+            <img src="/images/f51/f51_collage2.jpg" />
             <figcaption>Speaker wiring connection.</figcaption>
           </figure>
           <figure className="mr-12">
-            <img src="./src/images/f51/f51_collage4.jpg" />
+            <img src="/images/f51/f51_collage4.jpg" />
             <figcaption>Schematic for the power transformer.</figcaption>
           </figure>
         </div>
@@ -111,8 +111,8 @@ function F51() {
           </div>
           <div className="col-start-1 md:col-start-4 md:col-span-3 col-span-6 my-12">
             <video width="100%" height="auto" autoPlay muted loop>
-              <source src="./src/images/f51/power.mp4" type="video/mp4" />
-              <source src="./src/images/f51/power.ogg" type="video/ogg" />
+              <source src="/images/f51/power.mp4" type="video/mp4" />
+              <source src="/images/f51/power.ogg" type="video/ogg" />
             </video>
           </div>
         </div>

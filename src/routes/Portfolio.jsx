@@ -41,11 +41,7 @@ function Portfolio() {
                 Moving Mountains.
               </a>
             </p>
-            <img
-              data-animate
-              className="squiggle"
-              src="./src/icons/squiggle.svg"
-            />
+            <img data-animate className="squiggle" src="icons/squiggle.svg" />
           </div>
 
           {/* List of Work */}
