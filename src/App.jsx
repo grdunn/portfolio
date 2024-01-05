@@ -1,6 +1,8 @@
 import { React, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
+import AudioPlayer from "./components/AudioPlayer";
 import "./styles/index.scss";
+import Modal from "./components/Modal/Modal";
 
 const year = new Date().getFullYear();
 

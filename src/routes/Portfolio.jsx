@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "../components/Modal/Modal";
+import AudioPlayer from "../components/AudioPlayer";
 
 function Portfolio() {
+  const [modalActive, setModalActive] = useState(false);
+  const [modalContent, setModalContent] = useState("");
+
+  const showModal = (val) => (e) => {
+    setModalContent(val);
+    setModalActive(true);
+  };
+
+  const closeModal = (childData) => {
+    setModalActive(false);
+  };
+
   return (
     <>
       <div className="container mx-auto mt-32 lg:mt-52 mb-36 px-12">
@@ -115,20 +129,6 @@ function Portfolio() {
                 </p>
               </li>
               <li>*Full list coming soon.</li>
-              {/* <li>
-                <a href="#">Georgetown University Global Cities</a>
-                <p>
-                  A public forum and advocate for design quality and equity in
-                  the planning, architecture, preservation and physical
-                  development of Philadelphia.
-                </p>
-              </li>
-              <li>
-                <a href="https://triplecrownrecords.com" target="_blank">
-                  Triple Crown Records
-                </a>
-                <p>Website for New York based record label.</p>
-              </li> */}
             </ul>
           </div>
           <div
@@ -144,11 +144,7 @@ function Portfolio() {
                 </p>
               </li>
               <li>
-                <a
-                  className="link-external"
-                  target="_blank"
-                  href="https://open.spotify.com/track/6Gj8IgUYGz1u6F2XAabi0J?si=83b8cc75d3a546b0"
-                >
+                <button onClick={showModal(<AudioPlayer />)}>
                   "Deathless"
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +166,7 @@ function Portfolio() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                </a>
+                </button>
                 <p>
                   "The type of grandeur it captures is achingly personal, an
                   epic only in the sense of how every day can be a battle. It’s
@@ -179,11 +175,7 @@ function Portfolio() {
                 </p>
               </li>
               <li>
-                <a
-                  className="link-external"
-                  target="_blank"
-                  href="https://open.spotify.com/track/0pXlbFHgIz7BK9bl0IkedW?si=6b47760439e44623"
-                >
+                <button onClick={showModal("Hello")}>
                   "Kingfisher"
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +197,7 @@ function Portfolio() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                </a>
+                </button>
                 <p>
                   "This LP is carefully constructed and pushes all the right
                   emotional buttons to great effect, balancing its angst-ridden
@@ -248,7 +240,6 @@ function Portfolio() {
               </li>
             </ul>
           </div>
-
           <div className="col-start-1 lg:col-start-2 col-span-6 lg:col-span-4 mt-28">
             <h2 className="mb-12">Experience</h2>
             <div className="mb-12">
@@ -296,6 +287,7 @@ function Portfolio() {
           </div>
         </div>
       </div>
+      <Modal active={modalActive} comp={modalContent} callback={closeModal} />
     </>
   );
 }
