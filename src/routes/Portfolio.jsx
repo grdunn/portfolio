@@ -13,6 +13,7 @@ function Portfolio() {
 
   const closeModal = (childData) => {
     setModalActive(false);
+    setModalContent("");
   };
 
   return (
@@ -144,28 +145,8 @@ function Portfolio() {
                 </p>
               </li>
               <li>
-                <button onClick={showModal(<AudioPlayer />)}>
+                <button className="link" onClick={showModal(<AudioPlayer />)}>
                   "Deathless"
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                  >
-                    <path
-                      d="M0.5 7H13.5"
-                      stroke="#000001"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M10 10.5L13.5 7L10 3.5"
-                      stroke="#000001"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
                 </button>
                 <p>
                   "The type of grandeur it captures is achingly personal, an
@@ -175,28 +156,8 @@ function Portfolio() {
                 </p>
               </li>
               <li>
-                <button onClick={showModal("Hello")}>
+                <button className="link" onClick={showModal("Hello")}>
                   "Kingfisher"
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                  >
-                    <path
-                      d="M0.5 7H13.5"
-                      stroke="#000001"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M10 10.5L13.5 7L10 3.5"
-                      stroke="#000001"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
                 </button>
                 <p>
                   "This LP is carefully constructed and pushes all the right

@@ -1,20 +1,16 @@
 import { useRef, useState } from "react";
 import { tracks } from "../data/tracks";
 
-// import components
 import DisplayTrack from "./DisplayTrack";
 import Controls from "./Controls";
 import ProgressBar from "./ProgressBar";
-// import TopBar from './TopBar';
 
 const AudioPlayer = () => {
-  // states
   const [trackIndex, setTrackIndex] = useState(0);
   const [currentTrack, setCurrentTrack] = useState(tracks[trackIndex]);
   const [timeProgress, setTimeProgress] = useState(0);
   const [duration, setDuration] = useState(0);
 
-  // reference
   const audioRef = useRef();
   const progressBarRef = useRef();
 
@@ -30,7 +26,6 @@ const AudioPlayer = () => {
 
   return (
     <>
-      {/* <TopBar /> */}
       <div className="audio-player">
         <div className="inner">
           <DisplayTrack
