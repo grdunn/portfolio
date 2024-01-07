@@ -1,4 +1,13 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import {
+  IconVolumeMute,
+  IconVolumeMid,
+  IconVolumeLoud,
+  IconSkip,
+  IconPlay,
+  IconPause,
+  IconForward,
+} from "../components/Icons";
 
 const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -9,10 +18,21 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress }) => {
     setIsPlaying((prev) => !prev);
   };
 
+  const skipForward = () => {
+    audioRef.current.currentTime += 15;
+  };
+
+  const skipBackward = () => {
+    audioRef.current.currentTime -= 15;
+  };
+
   const playAnimationRef = useRef();
 
   const repeat = useCallback(() => {
     const currentTime = audioRef.current.currentTime;
+    if (!audioRef.current.currentTime) {
+      return;
+    }
     setTimeProgress(currentTime);
     progressBarRef.current.value = currentTime;
     progressBarRef.current.style.setProperty(
@@ -41,18 +61,15 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress }) => {
 
   return (
     <div className="controls-wrapper">
-      <div className="controls">
-        <button onClick={togglePlayPause}>
-          {isPlaying ? "Pause" : "Play"}
-        </button>
-      </div>
       <div className="volume">
         <button onClick={() => setMuteVolume((prev) => !prev)}>
-          {muteVolume || volume < 5
-            ? "Volume Off"
-            : volume < 40
-            ? "volume mid"
-            : "Volume high"}
+          {muteVolume || volume < 5 ? (
+            <IconVolumeMute />
+          ) : volume < 40 ? (
+            <IconVolumeMid />
+          ) : (
+            <IconVolumeLoud />
+          )}
         </button>
         <input
           type="range"
@@ -65,6 +82,18 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress }) => {
           }}
         />
       </div>
+      <div className="controls">
+        <button className="skip" onClick={skipBackward}>
+          <IconSkip />
+        </button>
+        <button className="play" onClick={togglePlayPause}>
+          {isPlaying ? <IconPlay /> : <IconPause />}
+        </button>
+        <button className="skip" onClick={skipForward}>
+          <IconForward />
+        </button>
+      </div>
+      <div className="extra"></div>
     </div>
   );
 };

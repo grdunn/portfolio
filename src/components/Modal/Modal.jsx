@@ -22,8 +22,9 @@ const Modal = (props) => {
   return (
     <div>
       <div className={`modal modal-container ${props.active ? "active" : ""}`}>
-        <div className="modal__inner">
+        <div className="modal__inner md:w-4/5 w-11/12">
           <div className="modal__nav">
+            <div className="modal__title">{props.title}</div>
             <button
               onClick={(e) => {
                 closeModal(e);

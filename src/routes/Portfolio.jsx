@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Modal from "../components/Modal/Modal";
 import AudioPlayer from "../components/AudioPlayer";
+import audio from "../data/test.mp3";
+import prawn from "../data/test_copy.mp3";
+
+import { IconLinkExternal } from "../components/Icons";
 
 function Portfolio() {
   const [modalActive, setModalActive] = useState(false);
@@ -70,26 +74,7 @@ function Portfolio() {
                   href="https://destiny-xur-38d218cf797c.herokuapp.com"
                 >
                   Xur Inventory
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                  >
-                    <path
-                      d="M0.5 7H13.5"
-                      stroke="#000001"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M10 10.5L13.5 7L10 3.5"
-                      stroke="#000001"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <IconLinkExternal />
                 </a>
                 <p>
                   A little tool that pulls live game data from Destiny2.
@@ -103,26 +88,7 @@ function Portfolio() {
                   href="https://github.com/punkave/pk-pattern-library"
                 >
                   Apostrophe Pattern Library
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                  >
-                    <path
-                      d="M0.5 7H13.5"
-                      stroke="#000001"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M10 10.5L13.5 7L10 3.5"
-                      stroke="#000001"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <IconLinkExternal />
                 </a>
                 <p>
                   An internal styleguide scaffolding tool intended for projects
@@ -145,7 +111,13 @@ function Portfolio() {
                 </p>
               </li>
               <li>
-                <button className="link" onClick={showModal(<AudioPlayer />)}>
+                <button
+                  className="link"
+                  onClick={showModal({
+                    title: "Moving Mountains - Deathless",
+                    comp: <AudioPlayer audio={audio} />,
+                  })}
+                >
                   "Deathless"
                 </button>
                 <p>
@@ -156,7 +128,13 @@ function Portfolio() {
                 </p>
               </li>
               <li>
-                <button className="link" onClick={showModal("Hello")}>
+                <button
+                  className="link"
+                  onClick={showModal({
+                    title: "Prawn - Kingfisher",
+                    comp: <AudioPlayer audio={prawn} />,
+                  })}
+                >
                   "Kingfisher"
                 </button>
                 <p>
@@ -248,7 +226,12 @@ function Portfolio() {
           </div>
         </div>
       </div>
-      <Modal active={modalActive} comp={modalContent} callback={closeModal} />
+      <Modal
+        active={modalActive}
+        title={modalContent.title}
+        comp={modalContent.comp}
+        callback={closeModal}
+      />
     </>
   );
 }
