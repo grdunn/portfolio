@@ -117,7 +117,7 @@ function F51() {
             </ul>
           </div>
           <div className="col-start-1 md:col-start-4 md:col-span-3 col-span-6 my-12">
-            <video width="100%" height="auto" autoPlay muted loop>
+            <video width="100%" height="auto" playsInline autoPlay muted loop>
               <source src="/images/f51/power.mp4" type="video/mp4" />
               <source src="/images/f51/power.ogg" type="video/ogg" />
             </video>
