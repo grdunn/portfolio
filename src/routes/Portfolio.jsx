@@ -266,7 +266,7 @@ function Portfolio() {
                 <ul>
                   <li>
                     <p>
-                      Connect with me me over{" "}
+                      Connect with me over{" "}
                       <a href="mailto:grdunn@gmail.com">email.</a>
                     </p>
                   </li>
