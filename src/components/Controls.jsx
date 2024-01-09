@@ -30,9 +30,6 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress }) => {
 
   const repeat = useCallback(() => {
     const currentTime = audioRef.current.currentTime;
-    if (!audioRef.current.currentTime) {
-      return;
-    }
     setTimeProgress(currentTime);
     progressBarRef.current.value = currentTime;
     progressBarRef.current.style.setProperty(

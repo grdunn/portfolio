@@ -1,10 +1,25 @@
 import React, { useState } from "react";
 import Modal from "../components/Modal/Modal";
 import AudioPlayer from "../components/AudioPlayer";
-import audio from "../data/test.mp3";
-import prawn from "../data/test_copy.mp3";
+import deathless from "../data/deathless_sample.mp3";
 
 import { IconLinkExternal } from "../components/Icons";
+
+function Video(props) {
+  return (
+    <div>
+      <iframe
+        className="youtube-video"
+        width="100%"
+        src={props.video}
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
+    </div>
+  );
+}
 
 function Portfolio() {
   const [modalActive, setModalActive] = useState(false);
@@ -15,7 +30,7 @@ function Portfolio() {
     setModalActive(true);
   };
 
-  const closeModal = (childData) => {
+  const closeModal = () => {
     setModalActive(false);
     setModalContent("");
   };
@@ -95,7 +110,52 @@ function Portfolio() {
                   built using the Apostrophe content management system.
                 </p>
               </li>
-              <li>*Full list coming soon.</li>
+              <li>
+                <a
+                  className="link-external"
+                  target="_blank"
+                  href="http://globalcities.georgetown.edu"
+                >
+                  Georgetown University Global Cities
+                  <IconLinkExternal />
+                </a>
+                <p>
+                  An academic community dedicated to creating and sharing
+                  inter-disciplinary knowledge of cities, their communities and
+                  the opportunities associated with unprecedented global
+                  urbanization. Built using ApostropheCMS.
+                </p>
+              </li>
+              <li>
+                <a
+                  className="link-external"
+                  target="_blank"
+                  href="https://trenton250.org"
+                >
+                  Trenton250
+                  <IconLinkExternal />
+                </a>
+                <p>
+                  Website built for Trenton250, Trenton’s long-range
+                  Comprehensive Master Plan that will guide the City from now to
+                  the 250th Anniversary of its incorporation in 2042.
+                </p>
+              </li>
+              <li>
+                <a
+                  className="link-external"
+                  target="_blank"
+                  href="https://sustainvc.com/what-we-do"
+                >
+                  Sustain VC
+                  <IconLinkExternal />
+                </a>
+                <p>
+                  The SustainVC series of impact investment funds back
+                  innovative entrepreneurs that share a vision of a sustainable,
+                  more equitable, and healthier world.
+                </p>
+              </li>
             </ul>
           </div>
           <div
@@ -115,34 +175,34 @@ function Portfolio() {
                   className="link"
                   onClick={showModal({
                     title: "Moving Mountains - Deathless",
-                    comp: <AudioPlayer audio={audio} />,
+                    comp: <AudioPlayer audio={deathless} />,
                   })}
                 >
                   "Deathless"
                 </button>
                 <p>
-                  "The type of grandeur it captures is achingly personal, an
-                  epic only in the sense of how every day can be a battle. It’s
-                  a headrush of emotions, but one that leaves you restored at
-                  the end rather than feeling down.." - Stereogum
+                  Engineered & Mixed. "The type of grandeur it captures is
+                  achingly personal, an epic only in the sense of how every day
+                  can be a battle. It’s a headrush of emotions, but one that
+                  leaves you restored at the end rather than feeling down.." -
+                  Stereogum
                 </p>
               </li>
               <li>
                 <button
                   className="link"
                   onClick={showModal({
-                    title: "Prawn - Kingfisher",
-                    comp: <AudioPlayer audio={prawn} />,
+                    title: "Prawn - Gradwell Sessions",
+                    comp: (
+                      <Video video="https://www.youtube.com/embed/nFeoclcOUjo?si=xI4LNAzMww7R28Tp" />
+                    ),
                   })}
                 >
-                  "Kingfisher"
+                  Prawn Gradwell Sessions
                 </button>
                 <p>
-                  "This LP is carefully constructed and pushes all the right
-                  emotional buttons to great effect, balancing its angst-ridden
-                  lyrics with a sound that’s as clear as glass. Kingfisher is
-                  absolutely fabulous and a thrilling discovery, regardless if
-                  you accidentally stumble across this or not." - PopMatters
+                  Live performances engineered and mixed for New Jersey indie
+                  rock outfit Prawn @ Gradwell Studios.
                 </p>
               </li>
             </ul>

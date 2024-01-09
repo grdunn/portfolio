@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import { tracks } from "../data/tracks";
 import "./audio-player.scss";
 
 import DisplayTrack from "./DisplayTrack";

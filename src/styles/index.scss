@@ -23,7 +23,7 @@ body {
 h1,
 h2,
 h4 {
-  font-weight: 460;
+  font-weight: 560;
 }
 
 p {
@@ -40,9 +40,10 @@ video {
   border-radius: 3px;
 }
 
-// .container {
-//   padding: 0 3rem;
-// }
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
 
 .ul {
   margin: 2rem 0;
