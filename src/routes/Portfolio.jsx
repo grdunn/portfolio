@@ -77,19 +77,85 @@ function Portfolio() {
             </p>
             <img data-animate className="squiggle" src="icons/squiggle.svg" />
           </div>
-
+          <div className="col-start-1 col-span-6 mb-12" data-animate>
+            <h4>Relevant Work</h4>
+          </div>
           {/* List of Work */}
           <div className="col-start-1 lg:col-span-2 col-span-6" data-animate>
-            <h4 className="mb-12">Web</h4>
             <ul>
+              <li>
+                <a
+                  className="link-external"
+                  target="_blank"
+                  href="https://warrencenter.upenn.edu"
+                >
+                  <span>
+                    The Warren Center for Netwwork & Data Sciences
+                    <IconLinkExternal />
+                  </span>
+                </a>
+                <p>
+                  Fosters research and innovation in interconnected social,
+                  economic and technological systems.
+                </p>
+              </li>
+              <li>
+                <a
+                  className="link-external"
+                  target="_blank"
+                  href="https://www.covenanthousepa.org"
+                >
+                  <span>
+                    Covenant House PA
+                    <IconLinkExternal />
+                  </span>
+                </a>
+                <p>Serving youth experiencing homelessness in Pennsylvania.</p>
+              </li>
+              <li>
+                <a
+                  className="link-external"
+                  target="_blank"
+                  href="https://trenton250.org"
+                >
+                  <span>
+                    Trenton250
+                    <IconLinkExternal />
+                  </span>
+                </a>
+                <p>
+                  Trenton’s long-range Comprehensive Master Plan that will guide
+                  the City from now to the 250th Anniversary of its
+                  incorporation in 2042.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div className="col-start-1 lg:col-span-2 col-span-6" data-animate>
+            <ul>
+              <li>
+                <a
+                  className="link-external"
+                  target="_blank"
+                  href="https://pair.upenn.edu"
+                >
+                  <span>
+                    PAIR @ Penn Medicine
+                    <IconLinkExternal />
+                  </span>
+                </a>
+                <p>Palliative and Advanced Illness Research Center.</p>
+              </li>
               <li>
                 <a
                   className="link-external"
                   target="_blank"
                   href="https://destiny-xur-38d218cf797c.herokuapp.com"
                 >
-                  Xur Inventory
-                  <IconLinkExternal />
+                  <span>
+                    Xur Inventory
+                    <IconLinkExternal />
+                  </span>
                 </a>
                 <p>
                   A little tool that pulls live game data from Destiny2.
@@ -100,10 +166,33 @@ function Portfolio() {
                 <a
                   className="link-external"
                   target="_blank"
+                  href="https://sustainvc.com/what-we-do"
+                >
+                  <span>
+                    Sustain VC
+                    <IconLinkExternal />
+                  </span>
+                </a>
+                <p>
+                  The SustainVC series of impact investment funds back
+                  innovative entrepreneurs that share a vision of a sustainable,
+                  more equitable, and healthier world.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div className="col-start-1 lg:col-span-2 col-span-6" data-animate>
+            <ul>
+              <li>
+                <a
+                  className="link-external"
+                  target="_blank"
                   href="https://github.com/punkave/pk-pattern-library"
                 >
-                  Apostrophe Pattern Library
-                  <IconLinkExternal />
+                  <span>
+                    Apostrophe Pattern Library
+                    <IconLinkExternal />
+                  </span>
                 </a>
                 <p>
                   An internal styleguide scaffolding tool intended for projects
@@ -116,125 +205,16 @@ function Portfolio() {
                   target="_blank"
                   href="http://globalcities.georgetown.edu"
                 >
-                  Georgetown University Global Cities
-                  <IconLinkExternal />
+                  <span>
+                    Georgetown University Global Cities
+                    <IconLinkExternal />
+                  </span>
                 </a>
                 <p>
                   An academic community dedicated to creating and sharing
                   inter-disciplinary knowledge of cities, their communities and
                   the opportunities associated with unprecedented global
-                  urbanization. Built using ApostropheCMS.
-                </p>
-              </li>
-              <li>
-                <a
-                  className="link-external"
-                  target="_blank"
-                  href="https://trenton250.org"
-                >
-                  Trenton250
-                  <IconLinkExternal />
-                </a>
-                <p>
-                  Website built for Trenton250, Trenton’s long-range
-                  Comprehensive Master Plan that will guide the City from now to
-                  the 250th Anniversary of its incorporation in 2042.
-                </p>
-              </li>
-              <li>
-                <a
-                  className="link-external"
-                  target="_blank"
-                  href="https://sustainvc.com/what-we-do"
-                >
-                  Sustain VC
-                  <IconLinkExternal />
-                </a>
-                <p>
-                  The SustainVC series of impact investment funds back
-                  innovative entrepreneurs that share a vision of a sustainable,
-                  more equitable, and healthier world.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div
-            className="col-start-1 col-span-6 lg:col-start-3 lg:col-span-2"
-            data-animate
-          >
-            <h4 className="mb-12">Audio</h4>
-            <ul>
-              <li>
-                <a href="/#f51">F51 Amp Build</a>
-                <p>
-                  The build process of a Fender 57 custom champ tube amplifier.
-                </p>
-              </li>
-              <li>
-                <button
-                  className="link"
-                  onClick={showModal({
-                    title: "Moving Mountains - Deathless",
-                    comp: <AudioPlayer audio={deathless} />,
-                  })}
-                >
-                  "Deathless"
-                </button>
-                <p>
-                  Engineered & Mixed. "The type of grandeur it captures is
-                  achingly personal, an epic only in the sense of how every day
-                  can be a battle. It’s a headrush of emotions, but one that
-                  leaves you restored at the end rather than feeling down.." -
-                  Stereogum
-                </p>
-              </li>
-              <li>
-                <button
-                  className="link"
-                  onClick={showModal({
-                    title: "Prawn - Gradwell Sessions",
-                    comp: (
-                      <Video video="https://www.youtube.com/embed/nFeoclcOUjo?si=xI4LNAzMww7R28Tp" />
-                    ),
-                  })}
-                >
-                  Prawn Gradwell Sessions
-                </button>
-                <p>
-                  Live performances engineered and mixed for New Jersey indie
-                  rock outfit Prawn @ Gradwell Studios.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div
-            className="col-start-1 col-span-6 lg:col-start-5 lg:col-span-2"
-            data-animate
-          >
-            <h4 className="mb-12">Misc</h4>
-            <ul>
-              <li>
-                <p>
-                  Send me an <a href="mailto:grdunn@gmail.com">email.</a>
-                </p>
-              </li>
-              <li>
-                <p>
-                  View more of my development work in progress on{" "}
-                  <a target="_blank" href="https://github.com/grdunn">
-                    GitHub
-                  </a>
-                </p>
-              </li>
-              <li>
-                <p>
-                  Connect on{" "}
-                  <a
-                    target="_blank"
-                    href="https://www.linkedin.com/in/gregrdunn"
-                  >
-                    LinkedIn
-                  </a>
+                  urbanization.
                 </p>
               </li>
             </ul>
@@ -254,8 +234,6 @@ function Portfolio() {
                 development of Apostrophe 3 using Vue.js
               </p>
             </div>
-          </div>
-          <div className="col-start-1 lg:col-start-2 col-span-6 lg:col-span-4">
             <div className="mb-12">
               <p>
                 I also built various web tools and custom websites within the
@@ -266,8 +244,8 @@ function Portfolio() {
                 From May 2016 through June 2019, I managed projects, included
                 client and stakeholder communication, through development,
                 content creation, deployment &amp; support. Select clients
-                included Design Advocacy Group, Covenant House PA, Trenton250,
-                and Georgetown University.{" "}
+                included Design Advocacy Group, University Of Pennsylvania,
+                Covenant House, and Georgetown University.{" "}
               </p>
             </div>
             <div className="mb-12">
@@ -282,6 +260,66 @@ function Portfolio() {
                 composed materials. I worked one on one with students to discuss
                 their work and progress.
               </p>
+            </div>
+            <div className="grid gap-x-20 grid-cols-2">
+              <div className="col-start-1 col-span-1 mt-28">
+                <ul>
+                  <li>
+                    <p>
+                      Connect with me me over{" "}
+                      <a href="mailto:grdunn@gmail.com">email.</a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      View more of my development work in progress on{" "}
+                      <a target="_blank" href="https://github.com/grdunn">
+                        GitHub
+                      </a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        target="_blank"
+                        href="https://www.linkedin.com/in/gregrdunn"
+                      >
+                        LinkedIn
+                      </a>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-start-2 col-span-1 mt-28">
+                <ul>
+                  <li>
+                    <p>
+                      Check out this cool <a href="/#f51">guitar amp</a> I
+                      built.
+                    </p>
+                  </li>
+                  <li>
+                    This is a{" "}
+                    <button
+                      className="link"
+                      onClick={showModal({
+                        title: "Prawn - Gradwell Sessions",
+                        comp: (
+                          <Video video="https://www.youtube.com/embed/nFeoclcOUjo?si=xI4LNAzMww7R28Tp" />
+                        ),
+                      })}
+                    >
+                      live studio performance
+                    </button>{" "}
+                    I engineered and mixed.
+                  </li>
+                  <li>
+                    <a target="_blank" href="http://instagram.com/grdunn/">
+                      Instagram
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
