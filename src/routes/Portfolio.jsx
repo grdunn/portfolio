@@ -37,7 +37,7 @@ function Portfolio() {
 
   return (
     <>
-      <div className="container mx-auto mt-32 lg:mt-52 mb-36 px-12">
+      <div className="container mx-auto mt-32 lg:mt-52 mb-36 lg:px-12 px-8">
         <div className="grid gap-x-20 grid-cols-6">
           <div className="col-start-1 col-span-6 lg:col-start-2 lg:col-span-4">
             <h1 data-animate className="mb-12">
@@ -299,7 +299,7 @@ function Portfolio() {
                     </p>
                   </li>
                   <li>
-                    This is a{" "}
+                    This is a live{" "}
                     <button
                       className="link"
                       onClick={showModal({
@@ -309,9 +309,9 @@ function Portfolio() {
                         ),
                       })}
                     >
-                      live studio performance
+                      studio
                     </button>{" "}
-                    I engineered and mixed.
+                    performance I engineered and mixed.
                   </li>
                   <li>
                     <a target="_blank" href="http://instagram.com/grdunn/">

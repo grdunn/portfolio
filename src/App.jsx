@@ -9,10 +9,11 @@ function App() {
   useEffect(() => {
     const fetchApi = async () => {
       const url =
-        "https://api.openweathermap.org/data/2.5/weather?lat=39.9526&lon=75.1652&appid=ccca817f9c57f4e9f759637ca6aabe77";
+        "https://api.openweathermap.org/data/2.5/weather?zip=19125,us&appid=ccca817f9c57f4e9f759637ca6aabe77";
       const response = await fetch(url);
       const resJson = await response.json();
       setWeather(resJson.weather[0]);
+      console.log(resJson);
     };
     fetchApi();
   }, []);
