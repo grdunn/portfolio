@@ -13,7 +13,6 @@ function App() {
       const response = await fetch(url);
       const resJson = await response.json();
       setWeather(resJson.weather[0]);
-      console.log(resJson);
     };
     fetchApi();
   }, []);
