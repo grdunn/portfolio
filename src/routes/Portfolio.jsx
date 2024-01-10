@@ -90,7 +90,7 @@ function Portfolio() {
                   href="https://warrencenter.upenn.edu"
                 >
                   <span>
-                    The Warren Center for Netwwork & Data Sciences
+                    The Warren Center for Network & Data Sciences
                     <IconLinkExternal />
                   </span>
                 </a>
