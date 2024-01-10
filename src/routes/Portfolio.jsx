@@ -250,7 +250,7 @@ function Portfolio() {
             </div>
             <div className="mb-12">
               <p>
-                In 2019, I was an instructional associate for a 3 month
+                In 2015, I was an instructional associate for a 3 month
                 immersive web development course at{" "}
                 <a target="_target" href="https://generalassemb.ly">
                   General Assembly.
