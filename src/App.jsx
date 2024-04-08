@@ -21,11 +21,11 @@ function App() {
       <div>
         <Outlet />
       </div>
-      <footer className="border-t">
+      <footer className="border-t dark:border-zinc-700">
         <div className="container mx-auto px-12">
           <div className="grid gap-x-20 grid-cols-6 py-12">
             <div className="flex-col lg:flex-row col-start-1 lg:col-start-2 col-span-6 lg:col-span-4 flex items-center justify-between">
-              <h3 className="small mb-0 md:mb-4">{year}</h3>
+              <h3 className="small mb-4 md:mb-0">{year}</h3>
               <div className="">
                 {!weather ? (
                   <div></div>

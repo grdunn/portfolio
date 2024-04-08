@@ -10,7 +10,7 @@ function F51() {
   }, []);
   return (
     <>
-      <div className="container mx-auto mt-32 lg:mt-52 px-12">
+      <div className="container mx-auto mt-32 lg:mt-52 px-12 dark:text-zinc-200">
         <div className="grid gap-x-20 grid-cols-6">
           <div className="col-start-1 col-span-1" data-animate>
             <a href="/" className="arrow-index mb-12">
@@ -105,7 +105,7 @@ function F51() {
         <div className="grid gap-x-20 grid-cols-6">
           <div className="col-start-1 col-span-6 md:col-span-3 my-12">
             <h2>Specs & Details</h2>
-            <ul className="ul">
+            <ul className="ul dark:text-zinc-200">
               <li>F&T filters, Mallory tone caps.</li>
               <li>Carbon Comp and metal film resistors</li>
               <li>Alpha pots, Carling switches and Switchcraft jacks</li>
